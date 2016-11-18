@@ -1,0 +1,238 @@
+body {
+	font-family: 'Anaheim', sans-serif;
+
+}
+#fixed-navbar {
+	position: fixed;
+	font-size: 24px;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	-webkit-box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.2);
+	z-index: 100;
+/*	border: 1px green solid;
+*/}
+#leftitems {
+	display:inline-block;
+	position: absolute;
+	top:0;
+	left: 0;
+/*	border: 1px red solid;
+*/	height: 60px;
+}
+#rightitems {
+	display:inline-block;
+	position: absolute;
+	top:0;
+	right: 0;
+	height: 60px;
+/*border: 1px blue solid;
+*/}
+#heading {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 26px;
+	padding-top: 4px;
+/*	border: 1px blue solid;
+*/}
+
+.navitem {
+/*	border: 1px red solid;
+*/	position: relative;
+	display: inline-block;
+	margin-top: 0px;
+	text-align: center;
+	width: 200px;
+	padding: 14px;
+}
+.line {
+/*	border: 1px green solid;
+*/	position: absolute;
+	top: 6px;
+	width: 1px;
+	height: 48px;
+	background-color: #e4e4e4;
+}
+#line1 {
+	right: 0px;
+}
+#dropdownimgdiv{
+/*	border: 1px green solid;
+*/	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+
+}
+#dropdown {
+	height:100%;
+	width: 100%;
+	object-fit: cover;
+
+}
+#albumsbutton {
+	left: 0;
+}
+#aboutbutton {
+	right:0;
+}
+.navbutton:hover {
+	font-size: 28px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	cursor: pointer;
+}
+
+#background, #overlay{
+	color: blue;
+	position: absolute;
+	left: 0;
+	top: 60px;
+	width: 100%;
+	height: calc(100% - 60px);
+	z-index: -10;
+}
+#overlay {
+	background-color: rgba(0,0,0,0);
+	z-index: 20;
+}
+#homeimage{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+#announcements {
+	font-family: 'Anaheim', sans-serif;
+	z-index: 50;
+	position: absolute;
+	right: 5px;
+	top: 65px;
+	background-color: rgba(255,255,255,0.8);
+	width: 220px;
+	height: calc(100% - 70px);
+	min-width: 175px;
+	min-height: 50px;
+}
+#title {
+	width: 100%;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+	text-align: center;
+	background-color: white;
+	margin: 0 auto;
+	cursor: move;
+
+}
+#textbox {
+	cursor: default;
+	width: calc(100% - 20px);
+	padding: 10px;
+	height: calc(100% - 50px);
+	overflow: scroll;
+
+}
+#test {
+	z-index: 100;
+	background-color: rgba(255,255,255,0.8);
+	width: 250px;
+	height: 300px;
+}
+
+
+/** CITATION: http://stackoverflow.com/questions/18611195/x-close-button-only-using-css**/
+.x {
+  float:left;
+  position:absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding:0;
+  overflow:hidden;
+  background:#BBB;
+  border-radius:2px;
+  border:solid 2px #FFF;
+  transition: all .3s ease-out;
+  cursor:pointer;
+}
+.x.large { 
+  width:16px;
+  height:16px;
+}
+.x:hover{
+  background:#BB3333;
+  transition: all .3s ease-out;
+}
+.x b{
+  display:block;
+  position:absolute;
+  height:0;
+  width:0;
+  padding:0;
+  margin:0;
+}
+.x.large b {
+  border:solid 8px rgba(255,255,255,0);
+}
+.x b:nth-child(1){
+  border-top-color:#FFF;
+  top:-2px;
+}
+.x b:nth-child(2){
+  border-left-color:#FFF;
+  left:-2px;
+}
+.x b:nth-child(3){
+  border-bottom-color:#FFF;
+  bottom:-2px;
+}
+.x b:nth-child(4){
+  border-right-color:#FFF;
+  right:-2px;
+}
+
+#content-container {
+	background-color: #f3f3f3;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	height: calc(100% - 60px);
+	z-index: -10;
+}
+#sub-content-container {
+	position: relative;
+	margin: 0 auto;
+	width: 1024px;
+	border: 1px red solid;
+}
+#recent-header {
+	left: 0;
+	color: black;
+	font-weight: bold;
+	font-size: 36px;
+	height: 36px;
+	margin-top: 20px;
+	width: 210px;
+	border: 1px blue solid;
+	line-height: 32px;
+
+}
+#recent-header #underline {
+	background-color: black;
+	height: 3px;
+	width: 100%;
+	/*use javascript to extend the line?*/
+	
+}
+
+
+
+
+
+
