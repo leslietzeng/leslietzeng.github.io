@@ -235,8 +235,8 @@ body {
 #picture {
 	display: inline-block;
 	height: 100%;
-	border: 1px solid purple;
-}
+/*	border: 1px solid purple;
+*/}
 #picture img {
 	display: table;
 	margin: 0 auto;
