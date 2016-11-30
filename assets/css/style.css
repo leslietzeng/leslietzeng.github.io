@@ -1,6 +1,6 @@
 body {
 	font-family: 'Anaheim', sans-serif;
-
+	background-color: black;
 }
 #fixed-navbar {
 	position: fixed;
@@ -17,16 +17,16 @@ body {
 /*	border: 1px green solid;
 */}
 #leftitems {
-	display:inline-block;
-	position: absolute;
+/*	display:inline-block;
+*/	position: absolute;
 	top:0;
 	left: 0;
-/*	border: 1px red solid;
-*/	height: 60px;
-}
+	height: 100%px;
+/*	border: 1px blue solid;
+*/}
 #rightitems {
-	display:inline-block;
-	position: absolute;
+/*	display:inline-block;
+*/	position: absolute;
 	top:0;
 	right: 0;
 	height: 60px;
@@ -43,13 +43,12 @@ body {
 */}
 
 .navitem {
-/*	border: 1px red solid;
-*/	position: relative;
+	position: relative;
 	display: inline-block;
 	margin-top: 0px;
 	text-align: center;
 	width: 200px;
-	padding: 14px;
+	padding: 14.5px;
 }
 .line {
 /*	border: 1px green solid;
@@ -57,6 +56,7 @@ body {
 	top: 6px;
 	width: 1px;
 	height: 48px;
+
 	background-color: #e4e4e4;
 }
 #line1 {
@@ -78,44 +78,68 @@ body {
 }
 #albumsbutton {
 	left: 0;
+
 }
 #aboutbutton {
 	right:0;
 }
-.navbutton:hover {
+
+.large {
 	font-size: 28px;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	cursor: pointer;
 }
 
-#background, #overlay{
-	color: blue;
-	position: absolute;
+#background, #overlay, #albumview-container{
+	position: fixed;
 	left: 0;
 	top: 60px;
 	width: 100%;
 	height: calc(100% - 60px);
 	z-index: -10;
-}
+/*	border: 1px solid red;
+*/}
 #overlay {
 	background-color: rgba(0,0,0,0);
 	z-index: 20;
+}
+#albumview-container {
+	background-color: rgba(0,0,0,0.7);
+	z-index: 50;
+	display:none;
+	overflow: scroll;
 }
 #homeimage{
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }
+#announcements-button {
+	font-family: 'Anaheim', sans-serif;
+	color: black;
+	z-index: 50;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 220px;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;	
+	text-align: center;
+	background-color: white;
+	cursor: pointer;
+
+}
 #announcements {
 	font-family: 'Anaheim', sans-serif;
 	z-index: 50;
 	position: absolute;
 	right: 5px;
-	top: 65px;
+	top: 5px;
 	background-color: rgba(255,255,255,0.8);
 	width: 220px;
-	height: calc(100% - 70px);
+	height: calc(100% - 10px);
 	min-width: 175px;
 	min-height: 50px;
 }
@@ -196,7 +220,7 @@ body {
   right:-2px;
 }
 
-#content-container {
+/*#content-container {
 	background-color: #f3f3f3;
 	position: absolute;
 	left: 0;
@@ -227,12 +251,104 @@ body {
 	background-color: black;
 	height: 3px;
 	width: 100%;
-	/*use javascript to extend the line?*/
+	use javascript to extend the line
+}
+*/
+#searchbar {
+	width: 500px;
+	display: inline-block;
+	height: 36px;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+/*	border: 1px red solid;
+*/}
+#searchbar input[type=text] {
+	position: absolute;
+	top: 0px;
+	padding: 10px 20px 10px 35px;
+	width: 200px;
+	height: 16px;
+	border-radius: 5px;
+	border: 1px solid white;
+/*	color: white;
+*/	font-size: 18px;
+	font-family: 'Anaheim', sans-serif;
+	letter-spacing: 1px;
+	/*Search by Setyo Ari Wibowo from the Noun Project*/
+	background-image: url('../img/searchicon.png');
+	background-position: 3px 3px;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	
+    
 	
 }
+#searchbar input[type=text]:focus {	
+    outline-style: none;
+    
+}
+#go {
+	display: inline-block;
+	position: absolute;
+	left: 270px;
+	height: 18px;
+	padding: 10px;
+	font-size: 18px;
+	background-color: #667943;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+.albumsbutton-active {
+	color: #667943;
+}
+#albumview-header {
+	width: 100%;
+	height: 150px;
+}
+#albumview-albums {
+	height: calc(100% - 150px);
+}
+#albumview-albums-container {
+	width: 1000px;
+	margin: 0 auto;
+/*	border: 1px solid red;
+*/}
+.album {
+	display: inline-block;
+	vertical-align: top;
+	width: 275px;
+/*	background-color: white;
+*/	color: white;
+	font-size: 18px;
+}
+#albumview-albums-container div:not(:first-child) {
+	margin-left: 81px;
+}
 
+.album-image {
+	position: relative;
+	background-color: black;
+	height: 200px;
+	width: 100%;
+	margin-bottom: 10px;
 
-
-
-
+}
+.album-image img {
+	display: table;
+	margin: 0 auto;
+	height: 100%;
+	max-width: 275px;
+	object-fit: cover;
+}
+.img-selected {
+	-webkit-box-shadow: 0px 0px 10px 3px rgba(102,121,67,0.64);
+	-moz-box-shadow: 0px 0px 10px 3px rgba(102,121,67,0.64);
+	box-shadow: 0px 0px 10px 3px rgba(102,121,67,0.64);
+	cursor: pointer;
+}
+.selected {
+	cursor: pointer;
+}
 

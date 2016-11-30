@@ -2,16 +2,15 @@
 <html>
 	<head>
     	<title>Shu Wang</title>
-		<link rel="stylesheet" href="./assets/css/style.css">
+		<link rel="stylesheet" href="./assets/css/albumstyle.css">
 		<link href="https://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet">
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  <!-- figure out how to properly import this stuff-->
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   		<script src="./assets/js/jQueryRotate.js"></script>
-		<script src="./assets/js/script.js"> </script>
+		<script src="./assets/js/albumview-script.js"> </script>
 		
 	</head>
-
 	<body>
 		<div id="fixed-navbar">
 			<div id="leftitems">
@@ -22,7 +21,7 @@
 				
 			</div>
 			<div id="heading">
-				<b>SHU WANG<br> PHOTOGAPHY</b>
+				<b>ONE FISH</b>
 			</div>
 
 
@@ -31,44 +30,8 @@
 				<div class="navitem navbutton" id="aboutbutton">ABOUT</div>
 			</div>
 		</div>
-		<div id="overlay">
-			<div id="announcements-button">ANNOUNCEMENTS</div>
-			<div id="announcements">
-	 			<div class="x shift large"><b></b><b></b><b></b><b></b></div>
-		 			<div id="title">
-		 				ANNOUNCEMENTS
-		 			</div>
-		 			<div id="textbox">
-		 				<u>5/1/16</u><br>
-		 				<b>UPDATE</b><br>
-		 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus interdum commodo. Curabitur purus dui, porta quis nibh sit amet, pellentesque finibus sapien.<br>
-		 				<br>
-		 				<u>3/20/16</u><br>
-		 				<b>UPDATE</b><br>
-		 				Proin nisi augue, dictum a posuere tempus, lobortis quis tortor. Vestibulum elit mauris, auctor quis elit at, malesuada faucibus neque. 
-		 			</div>
- 			
- 			</div>
-		</div>
 
-		<div id="background">
-			<img id="homeimage" src="./assets/img/homeimage.jpg">
-
-		</div>
-
- 		
-
- 		<!-- <div id="content-container">
- 			<div id="sub-content-container">
- 				<div id="recent-header">
- 					Recent Photos
- 					<div id="underline"></div>
- 				</div>
- 			</div>
- 			
- 		</div> -->
-
- 		<div id="albumview-container"> 
+		<div id="albumview-container"> 
  			<div id="albumview-header">
  				<div id="searchbar"><input type="text" placeholder="Search..."> <div id="go"> GO</div></div>
  				<div class="sortbutton" id="alphabetical"></div>
@@ -101,9 +64,28 @@
 	 				</div>
 	 			</div>
  			</div>
-
  		</div>
- 		
- 
+ 		<div id="content-container">
+			<!-- House by AFY Studio from the Noun Project -->		
+			<div id="home"><img src='./assets/img/homeicon.png'></div>
+			<div id="picture-container">
+				<!-- grid view by Anusha Narvekar from the Noun Project -->
+				<div id="collection-button">
+					<img src="./assets/img/collectionicon.png">
+				</div>
+				<div class="arrow" id="left-button"><div>&lt;</div></div>
+				<div id="picture">
+					<img src="./assets/img/albumimage1.jpg">				
+				</div>
+				<div class="arrow" id="right-button"><div>&gt;</div></div>
+				<!-- comment by ✦ Shmidt Sergey ✦ from the Noun Project -->
+				<div id="comments-button">
+					<img src="./assets/img/commentsicon.png">
+				</div>
+
+			</div>
+			<div id="daynight-button"></div>
+
+		</div>
 	</body>
 </html>
